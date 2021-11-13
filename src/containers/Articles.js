@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Article from '../components/Article/Article';
+import { ArticleContext } from '../context/ArticleContext';
 
 const Articles = () => {
-  const [articles, setArticles] = useState([
-    { id: 1, title: 'post 1', body: 'Ein Testtext, super!' },
-    { id: 2, title: 'post 2', body: 'Noch ein Testtext, super!' }
-  ]);
+  const { articles } = useContext(ArticleContext);
 
   return (
     <div>
