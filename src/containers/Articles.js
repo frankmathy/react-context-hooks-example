@@ -4,7 +4,7 @@ import Article from '../components/Article/Article';
 const Articles = () => {
   const [articles, setArticles] = useState([
     { id: 1, title: 'post 1', body: 'Ein Testtext, super!' },
-    { id: 2, title: 'post 1', body: 'Ein Testtext, super!' }
+    { id: 2, title: 'post 2', body: 'Noch ein Testtext, super!' }
   ]);
 
   return (
