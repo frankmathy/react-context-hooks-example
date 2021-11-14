@@ -3,7 +3,7 @@ import './AddArticle.css';
 import { ArticleContext } from '../../context/ArticleContext';
 
 const AddArticle = () => {
-  const { saveArticle } = useContext(ArticleContext);
+  const { dispatch } = useContext(ArticleContext);
   const [article, setArticle] = useState();
 
   const handleArticleData = e => {
@@ -15,7 +15,7 @@ const AddArticle = () => {
 
   const addNewArticle = e => {
     e.preventDefault();
-    saveArticle(article);
+    dispatch({ type: 'ADD_ARTICLE', article });
   };
 
   return (
